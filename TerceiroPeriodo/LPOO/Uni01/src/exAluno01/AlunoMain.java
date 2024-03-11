@@ -42,15 +42,7 @@ public class AlunoMain {
 
 	}
 
-	private static void alterarNota2(Scanner entrada, Aluno[] alunos) {
-
-	}
-
-	private static void alterarNota1(Scanner entrada, Aluno[] alunos) {
-
-	}
-
-	private static void imprimirTodos(Aluno[] alunos) {
+	private static void cadastrarAluno(Scanner entrada, Aluno[] alunos) {
 
 	}
 
@@ -58,7 +50,15 @@ public class AlunoMain {
 
 	}
 
-	private static void cadastrarAluno(Scanner entrada, Aluno[] alunos) {
+	private static void imprimirTodos(Aluno[] alunos) {
+
+	}
+
+	private static void alterarNota1(Scanner entrada, Aluno[] alunos) {
+
+	}
+
+	private static void alterarNota2(Scanner entrada, Aluno[] alunos) {
 
 	}
 
