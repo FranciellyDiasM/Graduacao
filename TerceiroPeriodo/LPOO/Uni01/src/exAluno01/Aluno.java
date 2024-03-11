@@ -9,8 +9,11 @@ public class Aluno {
 	
 	
 	
-	public Aluno(String nome) {
+	public Aluno(String nome, int matricula) {
 		this.nome = nome;
+		this.matricula = matricula;
+		this.nota1 = 0;
+		this.nota2 = 0;
 	}
 
 	public Aluno(String nome, int matricula, double nota1, double nota2) {
