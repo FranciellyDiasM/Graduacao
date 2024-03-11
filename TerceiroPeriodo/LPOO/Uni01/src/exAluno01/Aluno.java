@@ -55,9 +55,21 @@ public class Aluno {
 		this.nota2 = nota2;
 	}
 	
+	public double getMedia() {
+		return (this.nota1 + this.nota2)/2.0;
+	}
+	
 	public boolean compareTo (Aluno outroAluno) {
 		return this.nome.equalsIgnoreCase(outroAluno.getNome());
 		
+	}
+	
+	public String getDescricaoReduzida() {
+		return "Aluno [nome= " + nome + ", media= " + getMedia() + "]";
+	}
+	
+	public String getDescricao() {
+		return "Aluno [nome= " + nome + ", nota1= " + nota1 + ", nota2= " + nota2 + ", media= " + getMedia() + "]";
 	}
 
 	public String toString() {

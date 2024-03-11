@@ -44,18 +44,18 @@ public class AlunoMain {
 	}
 
 	private static void cadastrarAluno(Scanner entrada, AlunoVet alunos) {
-		System.out.println("Informe o nome do Aluno: \n");
-		String nome = entrada.nextLine();
-		System.out.println("Informe a matricula: \n");
-		int matricula = entrada.nextInt();
 		
-		Aluno aluno = new Aluno(nome, matricula);
-		boolean cadastrouComSucesso = alunos.cadastrarAluno(aluno);
-
-		if (cadastrouComSucesso) {
-			System.out.println("Cadastrou com sucesso.\n");
-		} else {
+		if(alunos.estaCheio()) {
 			System.out.println("A lista de aluno está cheia.\n");
+		} else {
+			System.out.println("Informe o nome do Aluno: \n");
+			String nome = entrada.nextLine();
+			System.out.println("Informe a matricula: \n");
+			int matricula = entrada.nextInt();
+			
+			Aluno aluno = new Aluno(nome, matricula);
+			alunos.cadastrarAluno(aluno);
+			System.out.println("Cadastrou com sucesso.\n");
 		}
 	}
 
@@ -65,7 +65,7 @@ public class AlunoMain {
 		Aluno aluno = alunos.buscarNome(nome);
 
 		if (aluno != null) {
-			System.out.println(aluno.toString());
+			System.out.println(aluno.getDescricaoReduzida());
 		} else {
 			System.out.println("Aluno não cadastrado.\n");
 		}
@@ -85,6 +85,7 @@ public class AlunoMain {
 
 		if (aluno != null) {
 			aluno.setNota1(nota1);
+			System.out.println("Alterado a nota1 do " + aluno.getNome() + " Para: " + aluno.getNota1());
 		} else {
 			System.out.println("Aluno não cadastrado.\n");
 		}
@@ -101,6 +102,7 @@ public class AlunoMain {
 
 		if (aluno != null) {
 			aluno.setNota2(nota2);
+			System.out.println("Alterado a nota2 do " + aluno.getNome() + " Para: " + aluno.getNota2());
 		} else {
 			System.out.println("Aluno não cadastrado.\n");
 		}
