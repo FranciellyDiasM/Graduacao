@@ -58,7 +58,7 @@ public class Aluno {
 	}
 
 	public String toString() {
-		return "Aluno [nome= " + nome + ", matricula=" + matricula + ", nota1=" + nota1 + ", nota2=" + nota2 + "]";
+		return "Aluno [nome= " + nome + ", matricula= " + matricula + ", nota1= " + nota1 + ", nota2= " + nota2 + "]";
 	}
 	
 	
